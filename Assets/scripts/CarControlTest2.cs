@@ -58,7 +58,7 @@ public class CarControlTest2 : MonoBehaviour
         }
 
         // Breaking Input
-        isBreaking = Input.GetKey(KeyCode.Space);
+        isBreaking = Input.GetKey(KeyCode.PageUp);
     }
 
     private void HandleMotor()
