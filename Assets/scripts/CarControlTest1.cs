@@ -57,7 +57,7 @@ public class CarControlTest1 : MonoBehaviour
         }
 
         // Breaking Input
-        isBreaking = Input.GetKey(KeyCode.Space);
+       // isBreaking = Input.GetKey(KeyCode.Space);
     }
 
     private void HandleMotor()
