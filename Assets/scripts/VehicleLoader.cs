@@ -15,12 +15,12 @@ public class VehicleLoader : MonoBehaviour
         if (selectedVehicle == "Bike")
         {
             bikeModel.SetActive(true);
-            carModel.SetActive(false);
+            carModel.SetActive(true);
         }
         else
         {
             carModel.SetActive(true);
-            bikeModel.SetActive(false);
+            bikeModel.SetActive(true);
         }
     }
 }
