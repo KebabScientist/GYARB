@@ -9,7 +9,7 @@ public class SceneChanger : MonoBehaviour
 {
     public void LoadPreviousScene()
     {
-        int previousSceneIndex = SceneManager.GetActiveScene().buildIndex + 1;
+        int previousSceneIndex = SceneManager.GetActiveScene().buildIndex - 2;
         if (previousSceneIndex >= 0)
         {
             SceneManager.LoadScene(previousSceneIndex);

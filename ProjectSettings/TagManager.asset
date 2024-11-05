@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Car
+  - Bike
+  - P1
+  - P2
   layers:
   - Default
   - TransparentFX
