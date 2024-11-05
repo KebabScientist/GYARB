@@ -196,7 +196,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 93358832}
   m_CullTransparentMesh: 1
---- !u!1 &245708803
+--- !u!1 &131379746
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -204,8 +204,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 245708805}
-  - component: {fileID: 245708804}
+  - component: {fileID: 131379748}
+  - component: {fileID: 131379747}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -213,27 +213,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &245708804
+--- !u!114 &131379747
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245708803}
+  m_GameObject: {fileID: 131379746}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93d4d0db54b56a347a6519c48695b8d5, type: 3}
+  m_Script: {fileID: 11500000, guid: 1701325166313f848aa453a593d9261a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!4 &245708805
+--- !u!4 &131379748
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 245708803}
+  m_GameObject: {fileID: 131379746}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 482.9651, y: 346.42932, z: 473.357}
+  m_LocalPosition: {x: 507.2477, y: 379.02237, z: 204.41344}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1207,9 +1207,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 245708804}
-        m_TargetAssemblyTypeName: LoadSelector, Assembly-CSharp
-        m_MethodName: LoadVehicleSelector
+      - m_Target: {fileID: 131379747}
+        m_TargetAssemblyTypeName: PlayGame, Assembly-CSharp
+        m_MethodName: PlayTheGame
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
