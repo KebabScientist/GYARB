@@ -9,7 +9,7 @@ public class DropdownManager : MonoBehaviour
     void Start()
     {
         // Ensure each dropdown is properly referenced
-        if (myDropdowns.Length == 12)
+        if (myDropdowns.Length == 6)
         {
             // Add listeners to each dropdown
             for (int i = 0; i < myDropdowns.Length; i++)

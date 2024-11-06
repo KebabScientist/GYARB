@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public PlayerData player1Data;
     public PlayerData player2Data;
 
-    public int[] dropdownValues = new int[12];
+    public int[] dropdownValues = new int[6];
 
     private void Awake()
     {
