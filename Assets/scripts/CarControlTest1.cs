@@ -43,8 +43,8 @@ public class CarControlTest1 : MonoBehaviour
         // Set initial grip settings for each wheel
         AdjustWheelGrip(frontLeftWheelCollider, forwardGrip, sidewaysGrip);
         AdjustWheelGrip(frontRightWheelCollider, forwardGrip, sidewaysGrip);
-        AdjustWheelGrip(rearLeftWheelCollider, forwardGrip, sidewaysGrip);
-        AdjustWheelGrip(rearRightWheelCollider, forwardGrip, sidewaysGrip);
+        AdjustWheelGrip(rearLeftWheelCollider, forwardGrip, sidewaysGrip*0.75f);
+        AdjustWheelGrip(rearRightWheelCollider, forwardGrip, sidewaysGrip*0.75f);
     }
 
     private void GetInput()
