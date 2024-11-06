@@ -187,6 +187,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 9fe5b0aca40facf4b8512045594833cf, type: 2}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointMode
       value: 2
       objectReference: {fileID: 0}
@@ -493,6 +497,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4cdd22869e487e6448d0fcf1dc4dcfc0, type: 2}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointName
       value: 6 (red)
@@ -878,6 +886,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 74b95e72bf8521a4f97f4c016b86182b, type: 2}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointMode
       value: 3
       objectReference: {fileID: 0}
@@ -995,6 +1007,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: f43eee9b516708e4c911a0c38ddaa990, type: 2}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointName
       value: 5 (Purple)
@@ -1219,7 +1235,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687460903}
-  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967661, w: 0.70366555}
+  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967662, w: 0.70366555}
   m_LocalPosition: {x: 73.951996, y: 3.774, z: -11.513999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2231,7 +2247,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255034623}
-  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967661, w: 0.70366555}
+  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967662, w: 0.70366555}
   m_LocalPosition: {x: 73.951996, y: 3.774, z: -14.660999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2398,6 +2414,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: f43eee9b516708e4c911a0c38ddaa990, type: 2}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointMode
       value: 1
       objectReference: {fileID: 0}
@@ -2464,7 +2484,7 @@ MonoBehaviour:
     playerName: 
     lastCheckpoint: 
     score: 0
-  dropdownSelection: 0
+  dropdownValues: 000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &1328858557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2666,6 +2686,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9fe5b0aca40facf4b8512045594833cf, type: 2}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 9
+      objectReference: {fileID: 0}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointMode
       value: 2
@@ -3049,6 +3073,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: f43eee9b516708e4c911a0c38ddaa990, type: 2}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointName
       value: 7 (Purple)
       objectReference: {fileID: 0}
@@ -3189,6 +3217,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 74b95e72bf8521a4f97f4c016b86182b, type: 2}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointName
       value: 4 (green)
       objectReference: {fileID: 0}
@@ -3291,6 +3323,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 74b95e72bf8521a4f97f4c016b86182b, type: 2}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointMode
       value: 0
@@ -3504,6 +3540,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4cdd22869e487e6448d0fcf1dc4dcfc0, type: 2}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointMode
       value: 2
@@ -3828,6 +3868,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 9fe5b0aca40facf4b8512045594833cf, type: 2}
+    - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
+      propertyPath: dropdownIndex
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 6225134707573796545, guid: 1bd7e0079754b6d46b785df2bf470a23, type: 3}
       propertyPath: checkpointMode
       value: 0

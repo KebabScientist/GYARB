@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
         if (dropdownIndex >= 0 && dropdownIndex < dropdownValues.Length)
         {
             dropdownValues[dropdownIndex] = value;
-            Debug.Log("Dropdown " + dropdownIndex + " set to: " + value);
+            Debug.Log("Dropdown " + dropdownIndex + " set toa: " + value);
         }
     }
 

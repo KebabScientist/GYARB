@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DropdownManager : MonoBehaviour
 {
-    // Reference to the 6 dropdowns in the inspector
+   
     public TMP_Dropdown[] myDropdowns;
 
     void Start()
