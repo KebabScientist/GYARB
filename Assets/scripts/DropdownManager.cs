@@ -14,15 +14,24 @@ public class DropdownManager : MonoBehaviour
             // Add listeners to each dropdown
             for (int i = 0; i < myDropdowns.Length; i++)
             {
-                int index = i; // Capture the index for each dropdown
-                myDropdowns[i].onValueChanged.AddListener((value) => SaveDropdownValue(index, value));
+                if (myDropdowns[i] != null)
+                {
+                    int index = i; // Capture the index for each dropdown
+                    myDropdowns[i].onValueChanged.AddListener((value) => SaveDropdownValue(index, value));
+                    Debug.Log("Listener added to dropdown " + index);  // Log to check if listeners are added
+                }
+                else
+                {
+                    Debug.LogError("Dropdown at index " + i + " is not assigned!");
+                }
             }
         }
         else
         {
-            Debug.LogError("invalid nr of elements" + myDropdowns.Length);
+            Debug.LogError("Invalid number of elements: " + myDropdowns.Length);
         }
     }
+
 
     // This method is called when the dropdown value changes
     void SaveDropdownValue(int index, int value)
