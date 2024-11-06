@@ -1,31 +1,33 @@
-using UnityEngine;
 using TMPro;  // Import the TextMesh Pro namespace
+using UnityEngine;
 
 public class DropdownManager : MonoBehaviour
 {
-    public TMP_Dropdown myDropdown;  // Reference to the TMP_Dropdown component
+    // Reference to the 6 dropdowns in the inspector
+    public TMP_Dropdown[] myDropdowns;
 
     void Start()
     {
-        // Ensure the dropdown is referenced
-        if (myDropdown != null)
+        // Ensure each dropdown is properly referenced
+        if (myDropdowns.Length == 6)
         {
-            // Add listener for when the dropdown value changes
-            myDropdown.onValueChanged.AddListener(SaveDropdownValue);
+            // Add listeners to each dropdown
+            for (int i = 0; i < myDropdowns.Length; i++)
+            {
+                int index = i; // Capture the index for each dropdown
+                myDropdowns[i].onValueChanged.AddListener((value) => SaveDropdownValue(index, value));
+            }
         }
         else
         {
-            Debug.LogError("TMP_Dropdown is not assigned!");
+            Debug.LogError("Make sure there are 6 dropdowns assigned!");
         }
     }
 
     // This method is called when the dropdown value changes
-    void SaveDropdownValue(int value)
+    void SaveDropdownValue(int index, int value)
     {
-        // Log the value that was selected in the dropdown
-        Debug.Log("Selected Dropdown Value: " + value);
-
-        // Store the selected value in the GameManager (Singleton pattern)
-        GameManager.Instance.dropdownSelection = value;
+        // Store the value in the GameManager (Singleton pattern)
+        GameManager.Instance.SetDropdownValue(index, value);
     }
 }

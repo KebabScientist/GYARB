@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
     public PlayerData player1Data;
     public PlayerData player2Data;
 
-    public int dropdownSelection;
+    public int[] dropdownValues = new int[12];
 
     private void Awake()
     {
@@ -40,20 +40,23 @@ public class GameManager : MonoBehaviour
         Debug.Log("Player " + playerIndex + " reached checkpoint: " + checkpointName);
     }
 
-    public void SetDropdownValue(int value)
+    public void SetDropdownValue(int dropdownIndex, int value)
     {
-        dropdownSelection = value;
-
-        // Log the value for testing purposes
-        Debug.Log("Dropdown value saved: " + dropdownSelection);
-
-        // You can use this value for other game logic here
+        if (dropdownIndex >= 0 && dropdownIndex < dropdownValues.Length)
+        {
+            dropdownValues[dropdownIndex] = value;
+            Debug.Log("Dropdown " + dropdownIndex + " set to: " + value);
+        }
     }
 
     // You can also add a method to get the saved dropdown value if needed
-    public int GetDropdownValue()
+    public int GetDropdownValue(int dropdownIndex)
     {
-        return dropdownSelection;
+        if (dropdownIndex >= 0 && dropdownIndex < dropdownValues.Length)
+        {
+            return dropdownValues[dropdownIndex];
+        }
+        return 0;  // redurn nothin invalid if out of range
     }
 
     // Get the checkpoint for a specific player
