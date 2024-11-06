@@ -23,11 +23,27 @@ public class CarControlTest2 : MonoBehaviour
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
 
+    [Range(0, 5f)]
+    public float forwardGrip = 1.5f; // Adjust this to increase/decrease forward grip
+    [Range(0f, 5f)]
+    public float sidewaysGrip = 1.5f; // Adjust this to increase/decrease sideways grip
+
+    private void AdjustWheelGrip1()
+    {
+        // Set initial grip settings for each wheel
+        AdjustWheelGrip(frontLeftWheelCollider, forwardGrip, sidewaysGrip);
+        AdjustWheelGrip(frontRightWheelCollider, forwardGrip, sidewaysGrip);
+        AdjustWheelGrip(rearLeftWheelCollider, forwardGrip, sidewaysGrip);
+        AdjustWheelGrip(rearRightWheelCollider, forwardGrip, sidewaysGrip);
+    }
+
+
     private void FixedUpdate() {
         GetInput();
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+        AdjustWheelGrip1();
     }
 
     private void GetInput()
@@ -65,8 +81,8 @@ public class CarControlTest2 : MonoBehaviour
     {
         // Smooth acceleration
         float targetMotorTorque = verticalInput1 * motorForce;
-        frontLeftWheelCollider.motorTorque = Mathf.Lerp(frontLeftWheelCollider.motorTorque, targetMotorTorque, Time.deltaTime * accelerationSmoothing);
-        frontRightWheelCollider.motorTorque = Mathf.Lerp(frontRightWheelCollider.motorTorque, targetMotorTorque, Time.deltaTime * accelerationSmoothing);
+        rearLeftWheelCollider.motorTorque = Mathf.Lerp(frontLeftWheelCollider.motorTorque, targetMotorTorque, Time.deltaTime * accelerationSmoothing);
+        rearRightWheelCollider.motorTorque = Mathf.Lerp(frontRightWheelCollider.motorTorque, targetMotorTorque, Time.deltaTime * accelerationSmoothing);
 
         // Smooth braking
         float targetBrakeForce = isBreaking ? breakForce : 0f;
@@ -101,5 +117,18 @@ public class CarControlTest2 : MonoBehaviour
         wheelCollider.GetWorldPose(out pos, out rot);
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
+    }
+
+    private void AdjustWheelGrip(WheelCollider wheel, float forwardStiffness, float sidewaysStiffness)
+    {
+        // Adjust forward friction (gas/broms)
+        WheelFrictionCurve forwardFriction = wheel.forwardFriction;
+        forwardFriction.stiffness = forwardStiffness; // Set forward grip multiplier
+        wheel.forwardFriction = forwardFriction;
+
+        // Adjust sideways friction (styra)
+        WheelFrictionCurve sidewaysFriction = wheel.sidewaysFriction;
+        sidewaysFriction.stiffness = sidewaysStiffness; // Set sideways grip multiplier
+        wheel.sidewaysFriction = sidewaysFriction;
     }
 }

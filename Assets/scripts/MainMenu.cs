@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void PlayGame(string Game) //Startar spelet
     {
-        SceneManager.LoadScene(Game);
+        SceneManager.LoadScene(Game, LoadSceneMode.Single);
     }
 
     public void QuitGame() //Avslutar spelet

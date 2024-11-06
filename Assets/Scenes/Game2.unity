@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 338e33058a2776741a86b8c88c36880d, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: ee94f961d4b1a394ba3ed13ec60b3792, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -1031,7 +1031,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 183
+    m_Bits: 439
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -1050,7 +1050,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 687460903}
-  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967661, w: 0.70366555}
+  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967662, w: 0.70366555}
   m_LocalPosition: {x: 73.951996, y: 3.774, z: -11.513999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1808,8 +1808,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9812357, y: 1.2898762, z: 4.7350154}
-  m_Center: {x: -0.011386392, y: 0.7187525, z: -0.071972825}
+  m_Size: {x: 1.9812357, y: 1.1078957, z: 4.7350154}
+  m_Center: {x: -0.011386392, y: 0.80974275, z: -0.071972825}
 --- !u!54 &1156075013
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2104,7 +2104,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 375
+    m_Bits: 373
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -2123,7 +2123,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255034623}
-  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967661, w: 0.70366555}
+  m_LocalRotation: {x: 0.069676615, y: -0.70366555, z: 0.06967662, w: 0.70366555}
   m_LocalPosition: {x: 73.951996, y: 3.774, z: -14.660999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -2873,8 +2873,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.9812357, y: 1.2898762, z: 4.7350154}
-  m_Center: {x: -0.011386392, y: 0.7187525, z: -0.071972825}
+  m_Size: {x: 1.9812357, y: 1.0496103, z: 4.7350154}
+  m_Center: {x: -0.011386392, y: 0.8388855, z: -0.071972825}
 --- !u!4 &1918533702 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6810930330064475296, guid: a82f70a5f0178974093910fc6fd84c38, type: 3}
