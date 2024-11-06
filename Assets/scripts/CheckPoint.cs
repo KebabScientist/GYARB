@@ -1,21 +1,27 @@
 using UnityEngine;
 
-
-public class Checkpoint : MonoBehaviour
+public class CheckPoint : MonoBehaviour
 {
     public string checkpointName; // Unique name for the checkpoint
-    public bool isReached = false; // Flag to ensure only one trigger
-
-    // Player index to know which player triggered the checkpoint (Player 1 or Player 2)
-    public int playerIndex; // 1 for Player 1, 2 for Player 2
+    private int playerIndex; // 1 &2
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !isReached)
+        // Only trigger if the collider is a player
+        if (other.CompareTag("P1"))
         {
-            isReached = true;
-            GameManager.Instance.SetCheckpoint(playerIndex, checkpointName); // Notify GameManager with the player's checkpoint
-            Debug.Log("Player " + playerIndex + " reached " + checkpointName);
+            playerIndex = 1;
+            // Set the checkpoint for the player (based on the playerIndex)
+            GameManager.Instance.SetCheckpoint(playerIndex, checkpointName);
+            Debug.Log("Player " + playerIndex + " reached checkpoint: " + checkpointName);
+        }
+
+        if (other.CompareTag("P2"))
+        {
+            playerIndex = 2;
+            // Set the checkpoint for the player (based on the playerIndex)
+            GameManager.Instance.SetCheckpoint(playerIndex, checkpointName);
+            Debug.Log("Player " + playerIndex + " reached checkpoint: " + checkpointName);
         }
     }
 }

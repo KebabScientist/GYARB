@@ -9,7 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3162391345903006071}
-  - component: {fileID: 3791149354197124464}
+  - component: {fileID: 6225134707573796545}
+  - component: {fileID: 213784414089998179}
   m_Layer: 0
   m_Name: Checkpoint
   m_TagString: Untagged
@@ -33,7 +34,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3791149354197124464
+--- !u!114 &6225134707573796545
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -45,6 +46,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3715f8a403972a4db48b887ab4b02ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  checkpointName: 
+  isReached: 0
+  playerIndex: 0
+--- !u!65 &213784414089998179
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1125454219742245627}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &8171483700240544092
 GameObject:
   m_ObjectHideFlags: 0
