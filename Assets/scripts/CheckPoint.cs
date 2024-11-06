@@ -26,6 +26,11 @@ public class CheckPoint : MonoBehaviour
             {
                 AdjustVelocity(playerRigidbody, checkpointMode);
             }
+            if (checkpointMode == 3)  // OilSpill mode
+            {
+                // Call the coroutine to change the sideways grip for 3 seconds
+                StartCoroutine(other.GetComponent<CarControlTest1>().ChangeSidewaysGripTemporarily(0.0f, 3f));  
+            }
         }
 
         if (other.CompareTag("P2"))
@@ -43,7 +48,12 @@ public class CheckPoint : MonoBehaviour
             {
                 AdjustVelocity(playerRigidbody, checkpointMode);
             }
-
+            
+            if (checkpointMode == 3)  // OilSpill mode
+            {
+                // Call the coroutine to change the sideways grip for 3 seconds
+                StartCoroutine(other.GetComponent<CarControlTest2>().ChangeSidewaysGripTemporarily(0.0f, 3f)); 
+            }
 
 
         }
@@ -92,7 +102,7 @@ public class CheckPoint : MonoBehaviour
                 break;
             case 3: // OilSpill
                 
-                playerRigidbody.velocity *= 0.3f; 
+                playerRigidbody.velocity *= 0.8f; 
                 Debug.Log("OilSpill applied!");
                 break;
             default:

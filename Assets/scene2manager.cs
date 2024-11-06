@@ -11,4 +11,7 @@ public class scene2manager : MonoBehaviour
             Debug.Log("Dropdown " + i + " value: " + savedDropdownValue);
         }
     }
+
+
+
 }

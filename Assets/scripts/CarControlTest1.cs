@@ -131,4 +131,23 @@ public class CarControlTest1 : MonoBehaviour
         sidewaysFriction.stiffness = sidewaysStiffness; // Set sideways grip multiplier
         wheel.sidewaysFriction = sidewaysFriction;
     }
+
+    public IEnumerator ChangeSidewaysGripTemporarily(float newGrip, float duration)
+    {
+        float originalGrip = sidewaysGrip;  // Save the original grip value
+        sidewaysGrip = newGrip;  // Change to the new grip value (e.g., oil spill effect)
+
+        // Update wheel grip settings with the new sideways grip
+        AdjustWheelGrip1();
+
+        // Wait for the specified duration
+        yield return new WaitForSeconds(duration);
+
+        // Restore the original grip after the duration
+        sidewaysGrip = originalGrip;
+
+        // Update wheel grip settings back to the original grip
+        AdjustWheelGrip1();
+    }
+
 }
