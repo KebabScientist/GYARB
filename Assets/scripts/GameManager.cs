@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour
     public PlayerData player1Data;
     public PlayerData player2Data;
 
+    public int dropdownSelection;
+
     private void Awake()
     {
         if (Instance == null)
@@ -15,6 +17,7 @@ public class GameManager : MonoBehaviour
             Instance = this;
             player1Data = new PlayerData("Player 1");
             player2Data = new PlayerData("Player 2");
+            DontDestroyOnLoad(gameObject);
         }
         else
         {
@@ -35,6 +38,22 @@ public class GameManager : MonoBehaviour
         }
 
         Debug.Log("Player " + playerIndex + " reached checkpoint: " + checkpointName);
+    }
+
+    public void SetDropdownValue(int value)
+    {
+        dropdownSelection = value;
+
+        // Log the value for testing purposes
+        Debug.Log("Dropdown value saved: " + dropdownSelection);
+
+        // You can use this value for other game logic here
+    }
+
+    // You can also add a method to get the saved dropdown value if needed
+    public int GetDropdownValue()
+    {
+        return dropdownSelection;
     }
 
     // Get the checkpoint for a specific player
