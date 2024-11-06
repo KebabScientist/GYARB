@@ -20,6 +20,12 @@ public class CheckPoint : MonoBehaviour
             // Set the checkpoint for the player
             GameManager.Instance.SetCheckpoint(playerIndex, checkpointName);
             Debug.Log("Player " + playerIndex + " reached checkpoint: " + checkpointName + " - " + GetModeName(checkpointMode));
+
+            Rigidbody playerRigidbody = GetPlayerRigidbody(playerIndex);
+            if (playerRigidbody != null)
+            {
+                AdjustVelocity(playerRigidbody, checkpointMode);
+            }
         }
 
         if (other.CompareTag("P2"))
@@ -31,6 +37,67 @@ public class CheckPoint : MonoBehaviour
             // Set the checkpoint for the player
             GameManager.Instance.SetCheckpoint(playerIndex, checkpointName);
             Debug.Log("Player " + playerIndex + " reached checkpoint: " + checkpointName + " - " + GetModeName(checkpointMode));
+
+            Rigidbody playerRigidbody = GetPlayerRigidbody(playerIndex);
+            if (playerRigidbody != null)
+            {
+                AdjustVelocity(playerRigidbody, checkpointMode);
+            }
+
+
+
+        }
+    }
+
+    private Rigidbody GetPlayerRigidbody(int playerIndex)
+    {
+        GameObject playerObject = null;
+        if (playerIndex == 1)
+        {
+            playerObject = GameObject.FindWithTag("P1");  // Find Player 1
+        }
+        else if (playerIndex == 2)
+        {
+            playerObject = GameObject.FindWithTag("P2");  // Find Player 2
+        }
+
+        if (playerObject != null)
+        {
+            return playerObject.GetComponent<Rigidbody>();  // Return the Rigidbody of the player
+        }
+        else
+        {
+            Debug.LogError("Player with index " + playerIndex + " not found!");
+            return null;  // Return null if the player isn't found
+        }
+    }
+
+    private void AdjustVelocity(Rigidbody playerRigidbody, int mode)
+    {
+        switch (mode)
+        {
+            case 0: // Nothing
+                
+                playerRigidbody.velocity = playerRigidbody.velocity; // No change
+                break;
+            case 1: // SpeedBoost
+                
+                playerRigidbody.velocity *= 1.5f; 
+                Debug.Log("SpeedBoost applied!");
+                break;
+            case 2: 
+                
+                playerRigidbody.velocity *= 0.5f; 
+                Debug.Log("SlowDown applied!");
+                break;
+            case 3: // OilSpill
+                
+                playerRigidbody.velocity *= 0.3f; 
+                Debug.Log("OilSpill applied!");
+                break;
+            default:
+                Debug.LogWarning("Unknown mode: " + mode);
+                break;
         }
     }
 
