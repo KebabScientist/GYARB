@@ -1,34 +1,36 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Collections;
 
-public class CheckpointManager : MonoBehaviour
+[System.Serializable]
+public class Checkpoint
 {
-    // Dictionary to store unique checkpoints and their states (e.g., whether they've been reached)
-    private Dictionary<string, bool> checkpointsStatus = new Dictionary<string, bool>();
+    public string checkpointID; // Unique ID for the checkpoint
+    public bool isReached = false; // Status of the checkpoint (whether it’s reached or not)
+}
 
-    // Method to register checkpoints with their unique ID
-    public void RegisterCheckpoint(string checkpointID)
-    {
-        if (!checkpointsStatus.ContainsKey(checkpointID))
-        {
-            checkpointsStatus.Add(checkpointID, false); // Initialize as "not reached"
-        }
-    }
+public class CheckPointManager : MonoBehaviour
+{
+    // List to store checkpoints and their status, visible in the Inspector
+    public List<Checkpoint> checkpoints = new List<Checkpoint>();
 
     // Method to mark a checkpoint as reached
     public void CheckpointReached(string checkpointID)
     {
-        if (checkpointsStatus.ContainsKey(checkpointID))
+        foreach (var checkpoint in checkpoints)
         {
-            checkpointsStatus[checkpointID] = true; // Mark as reached
-            Debug.Log("Checkpoint " + checkpointID + " reached!");
-
-            // Optional: Check if all checkpoints have been reached
-            if (AllCheckpointsReached())
+            if (checkpoint.checkpointID == checkpointID && !checkpoint.isReached)
             {
-                Debug.Log("All unique checkpoints reached! Level complete!");
-                // Trigger any completion logic here
+                checkpoint.isReached = true; // Mark this checkpoint as reached
+                Debug.Log("Checkpoint " + checkpointID + " reached!");
+
+                // Optional: Check if all checkpoints have been reached
+                if (AllCheckpointsReached())
+                {
+                    Debug.Log("All unique checkpoints reached! Level complete!");
+                    // Trigger any level completion logic here
+                }
+
+                break; // Exit the loop once the correct checkpoint is found
             }
         }
     }
@@ -36,16 +38,23 @@ public class CheckpointManager : MonoBehaviour
     // Method to check if all checkpoints have been reached
     private bool AllCheckpointsReached()
     {
-        foreach (var checkpoint in checkpointsStatus.Values)
+        foreach (var checkpoint in checkpoints)
         {
-            if (!checkpoint) return false; // If any checkpoint is not reached, return false
+            if (!checkpoint.isReached) return false; // If any checkpoint is not reached, return false
         }
         return true;
     }
 
-    // Method to check if a specific checkpoint has been reached
+    // Optional: Method to check if a specific checkpoint has been reached
     public bool IsCheckpointReached(string checkpointID)
     {
-        return checkpointsStatus.ContainsKey(checkpointID) && checkpointsStatus[checkpointID];
+        foreach (var checkpoint in checkpoints)
+        {
+            if (checkpoint.checkpointID == checkpointID)
+            {
+                return checkpoint.isReached;
+            }
+        }
+        return false;
     }
 }
