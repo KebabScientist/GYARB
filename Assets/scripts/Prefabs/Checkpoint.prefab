@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   checkpointName: 
-  isReached: 0
-  playerIndex: 0
+  checkpointMode: 0
 --- !u!65 &213784414089998179
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -60,8 +59,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2.7652779, y: 2.730319, z: 2.823535}
+  m_Center: {x: 0.014564514, y: -0.014564991, z: -0.0029129982}
 --- !u!1 &8171483700240544092
 GameObject:
   m_ObjectHideFlags: 0
