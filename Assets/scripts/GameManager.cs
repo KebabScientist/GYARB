@@ -2,12 +2,13 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static GameManager Instance;
+    public static GameManager Instance { get; private set; }
 
     // PlayerData for Player 1 and Player 2
     public PlayerData player1Data;
     public PlayerData player2Data;
 
+    public int dropdownSelection;
     private void Awake()
     {
         if (Instance == null)
