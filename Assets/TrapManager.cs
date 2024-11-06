@@ -3,46 +3,57 @@ using UnityEngine.SceneManagement;
 
 public class TrapManager : MonoBehaviour
 {
-    // Button methods for Zone 1
+    private TrapType selectedTrapTypeZone1;
+    private TrapType selectedTrapTypeZone2;
+
     public void SetTrapZone1SpeedBoost()
     {
-        PlaceTrap(TrapType.SpeedBoost, "Zone1");
+        selectedTrapTypeZone1 = TrapType.SpeedBoost;
+        Debug.Log("Selected SpeedBoost for Zone 1");
     }
 
     public void SetTrapZone1Slowdown()
     {
-        PlaceTrap(TrapType.Slowdown, "Zone1");
+        selectedTrapTypeZone1 = TrapType.Slowdown;
+        Debug.Log("Selected Slowdown for Zone 1");
     }
 
     public void SetTrapZone1OilLeak()
     {
-        PlaceTrap(TrapType.OilLeak, "Zone1");
+        selectedTrapTypeZone1 = TrapType.OilLeak;
+        Debug.Log("Selected OilLeak for Zone 1");
     }
 
-    // Button methods for Zone 2
     public void SetTrapZone2SpeedBoost()
     {
-        PlaceTrap(TrapType.SpeedBoost, "Zone2");
+        selectedTrapTypeZone2 = TrapType.SpeedBoost;
+        Debug.Log("Selected SpeedBoost for Zone 2");
     }
 
     public void SetTrapZone2Slowdown()
     {
-        PlaceTrap(TrapType.Slowdown, "Zone2");
+        selectedTrapTypeZone2 = TrapType.Slowdown;
+        Debug.Log("Selected Slowdown for Zone 2");
     }
 
     public void SetTrapZone2OilLeak()
     {
-        PlaceTrap(TrapType.OilLeak, "Zone2");
+        selectedTrapTypeZone2 = TrapType.OilLeak;
+        Debug.Log("Selected OilLeak for Zone 2");
     }
 
-    // Make this method public so it is accessible
+    // Ensure PlaceTrap is defined and public
     public void PlaceTrap(TrapType trapType, string zone)
     {
         GameData.AddTrap(new TrapData(trapType, zone));
+        Debug.Log($"Placed {trapType} in {zone}");
     }
 
-    public void StartRace()
+    public void ConfirmTraps()
     {
-        SceneManager.LoadScene("Game");
+        GameData.AddTrap(new TrapData(selectedTrapTypeZone1, "Zone1"));
+        GameData.AddTrap(new TrapData(selectedTrapTypeZone2, "Zone2"));
+        Debug.Log("Confirmed traps for both zones and starting race");
+        SceneManager.LoadScene("Race");
     }
 }

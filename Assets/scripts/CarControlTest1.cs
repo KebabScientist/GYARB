@@ -10,7 +10,7 @@ public class CarControlTest1 : MonoBehaviour
     private bool isBreaking;
 
     // Settings
-    [SerializeField] private float motorForce, breakForce, maxSteerAngle;
+    [SerializeField] public float motorForce, breakForce, maxSteerAngle;
     [SerializeField] private float brakeSmoothing = 5f;
     [SerializeField] private float accelerationSmoothing = 5f;
 

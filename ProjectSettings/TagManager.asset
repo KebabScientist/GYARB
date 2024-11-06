@@ -8,6 +8,8 @@ TagManager:
   - Bike
   - P1
   - P2
+  - Zone1
+  - Zone2
   layers:
   - Default
   - TransparentFX

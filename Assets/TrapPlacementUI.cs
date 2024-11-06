@@ -6,6 +6,10 @@ public class TrapPlacementUI : MonoBehaviour
 
     public void OnTrapButtonClicked(int trapIndex, int zoneIndex)
     {
-        trapPlacementManager.PlaceTrap((TrapType)trapIndex, zoneIndex == 0 ? "Zone1" : "Zone2");
+        // Safely cast the trapIndex to the TrapType enum
+        TrapType trapType = (TrapType)trapIndex;
+        string zone = zoneIndex == 0 ? "Zone1" : "Zone2";
+        trapPlacementManager.PlaceTrap(trapType, zone);
+        Debug.Log($"Trap button clicked: {trapType} for {zone}");
     }
 }
