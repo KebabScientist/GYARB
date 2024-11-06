@@ -305,7 +305,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139205118}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.98800045, y: 0.56, z: -1.3850036}
+  m_LocalPosition: {x: -0.8480001, y: 0.56, z: -1.3850036}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1144,7 +1144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 695536561}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.9879998, y: 0.56, z: -1.385}
+  m_LocalPosition: {x: 0.82400024, y: 0.56, z: -1.385}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1838,7 +1838,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3b23f54b5f510b4395b1cbdec8707d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorForce: 3000
+  motorForce: 9000
   breakForce: 500
   maxSteerAngle: 30
   brakeSmoothing: 5
@@ -1850,9 +1850,9 @@ MonoBehaviour:
   frontLeftWheelTransform: {fileID: 1156075009}
   frontRightWheelTransform: {fileID: 1156075008}
   rearLeftWheelTransform: {fileID: 1156075007}
-  rearRightWheelTransform: {fileID: 1156075008}
-  forwardGrip: 2.73
-  sidewaysGrip: 1.09
+  rearRightWheelTransform: {fileID: 2130843930}
+  forwardGrip: 0.92
+  sidewaysGrip: 0.91
 --- !u!1001 &1169684479
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2388,7 +2388,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1643326406}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.988, y: 0.55999994, z: 1.484}
+  m_LocalPosition: {x: -0.848, y: 0.55999994, z: 1.484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2621,7 +2621,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1735533974}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.988, y: 0.56, z: 1.484}
+  m_LocalPosition: {x: 0.824, y: 0.56, z: 1.484}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2910,7 +2910,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c8cc8f530e5794893a8e0ad8f14e58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  motorForce: 1000
+  motorForce: 8000
   breakForce: 2000
   maxSteerAngle: 30
   brakeSmoothing: 5
@@ -2923,6 +2923,8 @@ MonoBehaviour:
   frontRightWheelTransform: {fileID: 1533895108}
   rearLeftWheelTransform: {fileID: 1027376482}
   rearRightWheelTransform: {fileID: 944152955}
+  forwardGrip: 1.5
+  sidewaysGrip: 1.5
 --- !u!1001 &1936130769
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3136,6 +3138,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 5517153144824333866, guid: a82f70a5f0178974093910fc6fd84c38, type: 3}
   m_PrefabInstance: {fileID: 1918533699}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2130843930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8673651577065080357, guid: a82f70a5f0178974093910fc6fd84c38, type: 3}
+  m_PrefabInstance: {fileID: 1156075003}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &2132794931
 GameObject:
