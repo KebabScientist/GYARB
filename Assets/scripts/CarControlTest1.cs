@@ -14,7 +14,6 @@ public class CarControlTest1 : MonoBehaviour
     [SerializeField] private float brakeSmoothing = 5f;
     [SerializeField] private float accelerationSmoothing = 5f;
 
-
     // Wheel Colliders
     [SerializeField] private WheelCollider frontLeftWheelCollider, frontRightWheelCollider;
     [SerializeField] private WheelCollider rearLeftWheelCollider, rearRightWheelCollider;
@@ -23,11 +22,22 @@ public class CarControlTest1 : MonoBehaviour
     [SerializeField] private Transform frontLeftWheelTransform, frontRightWheelTransform;
     [SerializeField] private Transform rearLeftWheelTransform, rearRightWheelTransform;
 
-    private void FixedUpdate() {
+    // Speedometer
+    public float speed;
+    public Rigidbody rb;
+
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody>();
+    }
+
+    private void FixedUpdate()
+    {
         GetInput();
         HandleMotor();
         HandleSteering();
         UpdateWheels();
+        CalculateSpeed();
     }
 
     private void GetInput()
@@ -57,7 +67,7 @@ public class CarControlTest1 : MonoBehaviour
         }
 
         // Breaking Input
-       // isBreaking = Input.GetKey(KeyCode.Space);
+        // isBreaking = Input.GetKey(KeyCode.Space);
     }
 
     private void HandleMotor()
@@ -73,32 +83,40 @@ public class CarControlTest1 : MonoBehaviour
         ApplyBreaking();
     }
 
-
-    private void ApplyBreaking() {
+    private void ApplyBreaking()
+    {
         frontRightWheelCollider.brakeTorque = currentbreakForce;
         frontLeftWheelCollider.brakeTorque = currentbreakForce;
         rearLeftWheelCollider.brakeTorque = currentbreakForce;
         rearRightWheelCollider.brakeTorque = currentbreakForce;
     }
 
-    private void HandleSteering() {
+    private void HandleSteering()
+    {
         currentSteerAngle = maxSteerAngle * horizontalInput1;
         frontLeftWheelCollider.steerAngle = currentSteerAngle;
         frontRightWheelCollider.steerAngle = currentSteerAngle;
     }
 
-    private void UpdateWheels() {
+    private void UpdateWheels()
+    {
         UpdateSingleWheel(frontLeftWheelCollider, frontLeftWheelTransform);
         UpdateSingleWheel(frontRightWheelCollider, frontRightWheelTransform);
         UpdateSingleWheel(rearRightWheelCollider, rearRightWheelTransform);
         UpdateSingleWheel(rearLeftWheelCollider, rearLeftWheelTransform);
     }
 
-    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform) {
+    private void UpdateSingleWheel(WheelCollider wheelCollider, Transform wheelTransform)
+    {
         Vector3 pos;
-        Quaternion rot; 
+        Quaternion rot;
         wheelCollider.GetWorldPose(out pos, out rot);
         wheelTransform.rotation = rot;
         wheelTransform.position = pos;
+    }
+
+    private void CalculateSpeed()
+    {
+        speed = rb.velocity.magnitude * 3.6f; // Convert m/s to km/h
     }
 }

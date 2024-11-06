@@ -7,9 +7,9 @@ public class TrapData
     public TrapType trapType;
     public string zone;
 
-    public TrapData(TrapType type, string zone)
+    public TrapData(TrapType trapType, string zone)
     {
-        trapType = type;
+        this.trapType = trapType;
         this.zone = zone;
     }
 }
@@ -18,13 +18,13 @@ public static class GameData
 {
     private static List<TrapData> placedTraps = new List<TrapData>();
 
-    public static void AddTrap(TrapData trap)
+    public static void AddTrap(TrapData trapData)
     {
-        placedTraps.Add(trap);
+        placedTraps.Add(trapData);
     }
 
     public static List<TrapData> GetPlacedTraps()
     {
-        return placedTraps;
+        return new List<TrapData>(placedTraps);
     }
 }
