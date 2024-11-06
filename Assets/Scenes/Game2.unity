@@ -1851,7 +1851,7 @@ MonoBehaviour:
   frontRightWheelTransform: {fileID: 1156075008}
   rearLeftWheelTransform: {fileID: 1156075007}
   rearRightWheelTransform: {fileID: 2130843930}
-  forwardGrip: 0.92
+  forwardGrip: 1.94
   sidewaysGrip: 0.91
 --- !u!1001 &1169684479
 PrefabInstance:
@@ -2923,8 +2923,8 @@ MonoBehaviour:
   frontRightWheelTransform: {fileID: 1533895108}
   rearLeftWheelTransform: {fileID: 1027376482}
   rearRightWheelTransform: {fileID: 944152955}
-  forwardGrip: 1.5
-  sidewaysGrip: 1.5
+  forwardGrip: 2.83
+  sidewaysGrip: 1.08
 --- !u!1001 &1936130769
 PrefabInstance:
   m_ObjectHideFlags: 0
