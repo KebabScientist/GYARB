@@ -14,12 +14,24 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Options.unity
     guid: bd151bfaf2c0f474f81b5e16ede36f6e
+<<<<<<< HEAD
   - enabled: 1
     path: Assets/Scenes/TrapManager.unity
     guid: e9e87d01428de0a4ea012a9055672a8f
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+=======
+  - enabled: 0
+    path: 
+    guid: 604d19d7e86972749b94422955d3a1d1
+  - enabled: 1
+    path: Assets/Scenes/TrapManager.unity
+    guid: e9e87d01428de0a4ea012a9055672a8f
+  - enabled: 1
+    path: Assets/Scenes/Game2.unity
+    guid: 989325867185994498de72d9f7fc720b
+>>>>>>> 2b8b997d3f1d39d43702082c9f6312d1600e12e5
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 778f17b33a0a6684f8ca7c34b007e18d, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000, guid: 75e9da1a9a1113b4b98ad1fda6a1dda1, type: 2}

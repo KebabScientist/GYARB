@@ -8,6 +8,9 @@ TagManager:
   - Bike
   - P1
   - P2
+  - Checkpoint
+  - P1UI
+  - P2UI
   layers:
   - Default
   - TransparentFX
